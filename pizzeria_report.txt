@@ -1,0 +1,14 @@
+1. 	My solution takes the coordinates of each pizzeria, finds the radius of the delivery, given the number of blocks that each of the pizzerias is willing to travel to, and then plots each pizzeria and their radius within Z city (giving it a 1 instead of a 0 on the 2d array). If any pizzeria delivery radius overlaps with another pizzeria, the overlapping blocks will change to 2 in the 2d array, and so on. Finally, the maximum number on the 2d array is identified, which is the desired maximum number of pizzerias delivering possible, given the constraints. 
+
+
+2. 	Initially, I had thought of two ways of solving the pizzeria problem. 
+
+	First, I could take the coordinates of each pizzeria p1 and p2 and compare their coordinates c1 and c2  and c3 and c4:
+((c3 - c1) + (c4 - c2)
+If the number achieved was below the assigned combined moves m1 and m2 for each pizzeria, then there will be at least one block which both of these pizzerias would deliver to. 
+
+	However, the downside of this approach is the Big O notation for this algorithm O(n^2), that is to say with an increased number of pizzerias in Z city, the number of comparisons the algorithm would have to make would be a quadratic number of the pizzerias.
+
+	The Big O for my solution is linear - O(n), where with each additional pizzeria, the algorithm would only have to add calculating the radius and plotting for that particular pizzeria to the execution list. Therefore, this algorithm is more efficient, which is why I have chosen it. 
+
+	I could further improve my algorithm by not recording the coordinates not positioned within Z city in the first place, this would save memory and time.
